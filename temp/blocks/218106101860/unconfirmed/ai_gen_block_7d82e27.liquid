@@ -1,6 +1,353 @@
+{% doc %}
+  @prompt
+    create this kind of section
+    <section id="shopify-section-template--23539978830097__9b4c854d-4f2e-4fdd-a6f0-9cda6f7914a4" class="shopify-section shopify-section--scrolling-content">
+    <style>
+        #shopify-section-template--23539978830097__9b4c854d-4f2e-4fdd-a6f0-9cda6f7914a4 {
+          --section-vertical-spacing: clamp(60px, calc(60px + (80 - 60) * ((100vw - 375px) / (1400 - 375))), 80px);
+          --scrolling-content-content-gap: clamp(80px, calc(80px + (120 - 80) * ((100vw - 375px) / (1400 - 375))), 120px);
+    
+          font-size: clamp(40px, calc(40px + (96 - 40) * ((100vw - 375px) / (1400 - 375))), 96px);
+        }
+      </style>
+    <div class="header_scroller">
+      <div class=" section-spacing  bordered-section" style="--border-color: var(--text-color) / 0.15; ">
+        <marquee-text speed="0.1" direction="left" class="scrolling-content">
+          <div class="scrolling-content__item"><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p></div>
+        <div class="scrolling-content__item" aria-hidden="true" style="position: absolute; inset-inline-start: 100%;"><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p></div><div class="scrolling-content__item" aria-hidden="true" style="position: absolute; inset-inline-start: 200%;"><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p></div><div class="scrolling-content__item" aria-hidden="true" style="position: absolute; inset-inline-start: 300%;"><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p></div><div class="scrolling-content__item" aria-hidden="true" style="position: absolute; inset-inline-start: 400%;"><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p></div><div class="scrolling-content__item" aria-hidden="true" style="position: absolute; inset-inline-start: 500%;"><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p><p class="scrolling-content__text ">- FREE SHIPPING OVER $150 AUD
+                    </p></div></marquee-text>
+      </div>
+      </div></section>
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-scrolling-text-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    overflow: hidden;
+    position: relative;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.vertical_padding }}px 0;
+  }
+
+  .ai-scrolling-text-container-{{ ai_gen_id }} {
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+
+  .ai-scrolling-text-item-{{ ai_gen_id }} {
+    display: flex;
+    white-space: nowrap;
+    animation: ai-scroll-{{ ai_gen_id }} {{ block.settings.scroll_speed }}s linear infinite;
+    {% if block.settings.direction == 'right' %}
+      animation-direction: reverse;
+    {% endif %}
+  }
+
+  .ai-scrolling-text-item-{{ ai_gen_id }}:nth-child(n+2) {
+    position: absolute;
+    top: 0;
+  }
+
+  .ai-scrolling-text-item-{{ ai_gen_id }}:nth-child(2) {
+    left: 100%;
+  }
+
+  .ai-scrolling-text-item-{{ ai_gen_id }}:nth-child(3) {
+    left: 200%;
+  }
+
+  .ai-scrolling-text-item-{{ ai_gen_id }}:nth-child(4) {
+    left: 300%;
+  }
+
+  .ai-scrolling-text-item-{{ ai_gen_id }}:nth-child(5) {
+    left: 400%;
+  }
+
+  .ai-scrolling-text-item-{{ ai_gen_id }}:nth-child(6) {
+    left: 500%;
+  }
+
+  .ai-scrolling-text-text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.font_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+    padding: 0 {{ block.settings.text_spacing }}px;
+    font-weight: {{ block.settings.font_weight }};
+    {% if block.settings.text_transform == 'uppercase' %}
+      text-transform: uppercase;
+    {% endif %}
+  }
+
+  @keyframes ai-scroll-{{ ai_gen_id }} {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media (hover: hover) {
+    .ai-scrolling-text-{{ ai_gen_id }}:hover .ai-scrolling-text-item-{{ ai_gen_id }} {
+      {% if block.settings.pause_on_hover %}
+        animation-play-state: paused;
+      {% endif %}
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-scrolling-text-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.font_size | times: 0.7 }}px;
+    }
+  }
+{% endstyle %}
+
+<scrolling-text-{{ ai_gen_id }} class="ai-scrolling-text-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-scrolling-text-container-{{ ai_gen_id }}">
+    {% for i in (1..6) %}
+      <div class="ai-scrolling-text-item-{{ ai_gen_id }}" {% if i > 1 %}aria-hidden="true"{% endif %}>
+        {% for j in (1..block.settings.repeat_count) %}
+          <p class="ai-scrolling-text-text-{{ ai_gen_id }}">
+            {{ block.settings.text }}
+          </p>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</scrolling-text-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ScrollingText{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.adjustScrollSpeed();
+      }
+
+      adjustScrollSpeed() {
+        const container = this.querySelector('.ai-scrolling-text-container-{{ ai_gen_id }}');
+        const firstItem = this.querySelector('.ai-scrolling-text-item-{{ ai_gen_id }}');
+        
+        if (!container || !firstItem) return;
+
+        const containerWidth = container.offsetWidth;
+        const itemWidth = firstItem.offsetWidth;
+
+        if (itemWidth < containerWidth) {
+          const repeatCount = Math.ceil(containerWidth / itemWidth) + 2;
+          const items = this.querySelectorAll('.ai-scrolling-text-item-{{ ai_gen_id }}');
+          
+          items.forEach((item, index) => {
+            if (index > 0) {
+              item.style.left = (index * 100) + '%';
+            }
+          });
+        }
+      }
+    }
+
+    customElements.define('scrolling-text-{{ ai_gen_id }}', ScrollingText{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Scrolling text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "- FREE SHIPPING OVER $150 AUD"
+    },
+    {
+      "type": "range",
+      "id": "repeat_count",
+      "label": "Repeat count",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5,
+      "info": "Number of times the text repeats in each scroll item"
+    },
+    {
+      "type": "header",
+      "content": "Animation"
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "Direction",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "scroll_speed",
+      "label": "Scroll speed",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "s",
+      "default": 30,
+      "info": "Lower values = faster scrolling"
+    },
+    {
+      "type": "checkbox",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 96,
+      "step": 2,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "select",
+      "id": "text_transform",
+      "label": "Text case",
+      "options": [
+        {
+          "value": "none",
+          "label": "Default"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "range",
+      "id": "text_spacing",
+      "label": "Text spacing",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "vertical_padding",
+      "label": "Vertical padding",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scrolling text"
+    }
+  ]
+}
 {% endschema %}
