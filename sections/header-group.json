@@ -11,50 +11,6 @@
   "type": "header",
   "name": "Header",
   "sections": {
-    "header_announcements_9jGBFp": {
-      "type": "header-announcements",
-      "blocks": {
-        "announcement_BxgCk9": {
-          "type": "_announcement",
-          "settings": {
-            "text": "Welcome",
-            "link": "",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "weight": "",
-            "letter_spacing": "normal",
-            "case": "none"
-          },
-          "blocks": {}
-        },
-        "announcement_yxpbeT": {
-          "type": "_announcement",
-          "settings": {
-            "text": "Bienvenue",
-            "link": "",
-            "font": "var(--font-subheading--family)",
-            "font_size": "0.75rem",
-            "weight": "",
-            "letter_spacing": "normal",
-            "case": "none"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "announcement_BxgCk9",
-        "announcement_yxpbeT"
-      ],
-      "name": "t:names.announcement_bar",
-      "settings": {
-        "speed": 2,
-        "section_width": "page-width",
-        "color_scheme": "scheme-1",
-        "divider_width": 1,
-        "padding-block-start": 15,
-        "padding-block-end": 15
-      }
-    },
     "header_section": {
       "type": "header",
       "blocks": {
@@ -94,9 +50,9 @@
         }
       },
       "settings": {
-        "logo_position": "center",
-        "menu_position": "center",
-        "menu_row": "bottom",
+        "logo_position": "left",
+        "menu_position": "left",
+        "menu_row": "top",
         "customer_account_menu": "customer-account-main-menu",
         "show_search": true,
         "search_position": "right",
@@ -161,13 +117,13 @@
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
+        "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
-        "color_scheme": "",
+        "color_scheme": "scheme-1",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
@@ -185,7 +141,6 @@
     }
   },
   "order": [
-    "header_announcements_9jGBFp",
     "header_section",
     "17724085638e86ceea"
   ]
