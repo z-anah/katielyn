@@ -1,0 +1,46 @@
+<section id="shopify-section-scrolling-announcement" class="shopify-section shopify-section--scrolling-content">
+  <style>
+    #shopify-section-scrolling-announcement {
+      --section-vertical-spacing: clamp(60px, calc(60px + (80 - 60) * ((100vw - 375px) / (1400 - 375))), 80px);
+      --scrolling-content-content-gap: clamp(80px, calc(80px + (120 - 80) * ((100vw - 375px) / (1400 - 375))), 120px);
+      font-size: clamp(40px, calc(40px + (96 - 40) * ((100vw - 375px) / (1400 - 375))), 96px);
+    }
+    .header_scroller {
+      width: 100%;
+      overflow: hidden;
+    }
+    .scrolling-content {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      gap: var(--scrolling-content-content-gap);
+    }
+    .scrolling-content__item {
+      display: flex;
+      gap: 2rem;
+    }
+    .scrolling-content__text {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+    .bordered-section {
+      border-top: 1px solid var(--border-color, #e0e0e0);
+      border-bottom: 1px solid var(--border-color, #e0e0e0);
+      padding: var(--section-vertical-spacing) 0;
+      position: relative;
+    }
+  </style>
+  <div class="header_scroller">
+    <div class="section-spacing bordered-section" style="--border-color: var(--text-color) / 0.15;">
+      <marquee-text speed="0.1" direction="left" class="scrolling-content">
+        {% for i in (1..5) %}
+        <div class="scrolling-content__item" aria-hidden="{{ i > 1 }}" style="position: absolute; inset-inline-start: {{ (i-1) }}00%;">
+          {% for j in (1..5) %}
+          <p class="scrolling-content__text">- FREE SHIPPING OVER $150 AUD</p>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </marquee-text>
+    </div>
+  </div>
+</section>
