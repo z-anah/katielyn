@@ -1,3 +1,14 @@
+/* Header divider between logo and menu */
+.header__divider {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1px;
+  height: 2em;
+  margin: 0 1.25rem;
+  background: var(--color-border, #e0e0e0);
+  opacity: 0.6;
+  border-radius: 1px;
+}
 * {
   box-sizing: border-box;
 }

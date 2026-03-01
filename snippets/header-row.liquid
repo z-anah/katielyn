@@ -76,6 +76,9 @@
               {{ first }}
             {% when 'logo' %}
               {{ logo }}
+              {%- if column == 'center' or column == 'left' -%}
+                <span class="header__divider" aria-hidden="true"></span>
+              {%- endif -%}
             {% when 'menu' %}
               {{ menu }}
             {% when 'localization' %}
