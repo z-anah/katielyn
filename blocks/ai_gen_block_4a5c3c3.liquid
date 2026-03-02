@@ -112,9 +112,12 @@
     grid-auto-columns: minmax({{ block.settings.card_width_mobile }}px, 1fr);
     gap: {{ block.settings.card_gap }}px;
     padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
   }
 
   .ai-featured-collections__card-{{ ai_gen_id }} {
+    scroll-snap-align: start;
     border: {{ block.settings.card_border_width }}px solid {{ block.settings.card_border_color }};
     background-color: {{ block.settings.card_background }};
     display: flex;
@@ -269,31 +272,15 @@
     font-size: 14px;
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 600px) {
     .ai-featured-collections__grid-{{ ai_gen_id }} {
       grid-auto-columns: minmax({{ block.settings.card_width_tablet }}px, 1fr);
-    }
-
-    .ai-featured-collections__subheading-{{ ai_gen_id }} {
-      font-size: {{ block.settings.subheading_size | times: 1.2 }}px;
-    }
-
-    .ai-featured-collections__heading-{{ ai_gen_id }} {
-      font-size: {{ block.settings.heading_size | times: 1.2 }}px;
     }
   }
 
   @media screen and (min-width: 990px) {
     .ai-featured-collections__grid-{{ ai_gen_id }} {
       grid-auto-columns: minmax({{ block.settings.card_width_desktop }}px, 1fr);
-    }
-
-    .ai-featured-collections__subheading-{{ ai_gen_id }} {
-      font-size: {{ block.settings.subheading_size | times: 1.4 }}px;
-    }
-
-    .ai-featured-collections__heading-{{ ai_gen_id }} {
-      font-size: {{ block.settings.heading_size | times: 1.5 }}px;
     }
   }
 {% endstyle %}
