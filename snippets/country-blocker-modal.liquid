@@ -3,8 +3,7 @@
     <h2>We don’t ship to Indonesia</h2>
     <p>Please select your shipping country.</p>
 
-    <form method="post" action="/localization">
-      <input type="hidden" name="form_type" value="localization">
+    {% form 'localization' %}
       <input type="hidden" name="return_to" value="{{ request.path }}">
 
       <select name="country_code" required>
@@ -14,14 +13,14 @@
       </select>
 
       <button type="submit">Shop Now</button>
-    </form>
+    {% endform %}
   </div>
 </div>
 
 <script>
 (async function () {
   try {
-    // Avoid showing popup again if country already chosen
+    // Do not show again if already selected
     if (localStorage.getItem('countrySelected')) return;
 
     const res = await fetch('https://ipapi.co/json/');
@@ -31,14 +30,14 @@
       document.getElementById('country-overlay').style.display = 'flex';
     }
 
-    // Mark as selected after submit
-    document.querySelector('#country-modal form')
-      .addEventListener('submit', function () {
+    const form = document.querySelector('#country-modal form');
+    if (form) {
+      form.addEventListener('submit', function () {
         localStorage.setItem('countrySelected', 'true');
       });
-
+    }
   } catch (e) {
-    console.error('Country blocker failed');
+    console.error('Country modal error', e);
   }
 })();
 </script>
