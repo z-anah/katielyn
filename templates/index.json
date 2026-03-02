@@ -52,12 +52,12 @@
           "name": "t:names.header",
           "static": true,
           "settings": {
-            "content_direction": "row",
+            "content_direction": "column",
             "vertical_on_mobile": false,
             "horizontal_alignment": "center",
             "vertical_alignment": "flex-end",
             "align_baseline": true,
-            "horizontal_alignment_flex_direction_column": "flex-start",
+            "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
             "width": "fill",
@@ -81,6 +81,32 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "text_YDc8wU": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<h2>Shop our</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "product_list_text_YFtzcL": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
@@ -89,7 +115,7 @@
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h4",
+                "type_preset": "h3",
                 "font": "var(--font-body--family)",
                 "font_size": "",
                 "line_height": "normal",
@@ -123,6 +149,7 @@
             }
           },
           "block_order": [
+            "text_YDc8wU",
             "product_list_text_YFtzcL",
             "product_list_button_MWeP9V"
           ]
