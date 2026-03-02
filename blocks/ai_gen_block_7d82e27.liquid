@@ -58,6 +58,8 @@
     position: relative;
     background-color: {{ block.settings.background_color }};
     padding: {{ block.settings.vertical_padding }}px 0;
+    border-top: 1px solid var(--text-color, #000000);
+    border-bottom: 1px solid var(--text-color, #000000);
   }
 
   .ai-scrolling-text-container-{{ ai_gen_id }} {

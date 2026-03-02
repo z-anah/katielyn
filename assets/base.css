@@ -3,7 +3,7 @@
   display: inline-block;
   vertical-align: middle;
   width: 1px;
-  height: 3em;
+  height: 5em;
   margin: 0 1.25rem;
   background: var(--color-border, #e0e0e0);
   opacity: 0.6;
