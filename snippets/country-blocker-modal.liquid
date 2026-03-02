@@ -18,18 +18,26 @@
 </div>
 
 <script>
-  (async function () {
-    try {
-      const res = await fetch('https://ipapi.co/json/');
-      const data = await res.json();
+(async function () {
+  // Do not show again if already chosen
+  if (localStorage.getItem('countrySelected') === 'true') return;
 
-      //  console.log(Shopify.country);
+  try {
+    const res = await fetch('https://ipapi.co/json/');
+    const data = await res.json();
 
-      if (data && data.country === 'ID') {
-        document.getElementById('country-overlay').style.display = 'flex';
-      }
-    } catch (e) {
-      console.error('Geo check failed');
+    if (data && data.country === 'ID') {
+      document.getElementById('country-overlay').style.display = 'flex';
     }
-  })();
+
+    document.addEventListener('submit', function (e) {
+      if (e.target.closest('#country-modal')) {
+        localStorage.setItem('countrySelected', 'true');
+      }
+    });
+
+  } catch (e) {
+    console.error('Geo check failed');
+  }
+})();
 </script>
