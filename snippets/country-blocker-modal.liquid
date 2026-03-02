@@ -4,6 +4,9 @@
     <p>Please select your shipping country.</p>
 
     <form method="post" action="/localization">
+      <input type="hidden" name="form_type" value="localization">
+      <input type="hidden" name="return_to" value="{{ request.path }}">
+
       <select name="country_code" required>
         <option value="AU">Australia ($)</option>
         <option value="SG">Singapore ($)</option>
@@ -16,16 +19,16 @@
 </div>
 
 <script>
-(async function () {
-  try {
-    const res = await fetch('https://ipapi.co/json/');
-    const data = await res.json();
+  (async function () {
+    try {
+      const res = await fetch('https://ipapi.co/json/');
+      const data = await res.json();
 
-    if (data.country === 'ID') {
-      document.getElementById('country-overlay').style.display = 'flex';
+      if (data.country === 'ID') {
+        document.getElementById('country-overlay').style.display = 'flex';
+      }
+    } catch (e) {
+      console.error('Geo check failed');
     }
-  } catch (e) {
-    console.error('Geo check failed');
-  }
-})();
+  })();
 </script>
