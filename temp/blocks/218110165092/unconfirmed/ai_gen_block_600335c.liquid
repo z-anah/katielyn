@@ -1,6 +1,311 @@
+{% doc %}
+  @prompt
+    Create a Shopify section block that displays a horizontally scrolling announcement bar, similar to the following HTML structure for mobile, tablet, and desktop:
+    
+    The section should have a unique ID and the class "shopify-section--scrolling-content".
+    It should include a <style> block for responsive font size and spacing using CSS clamp().
+    The main content is a horizontally scrolling marquee with repeated announcement text (e.g., "- FREE SHIPPING OVER $150 AUD").
+    The marquee should be visually consistent across mobile, tablet, and desktop, with responsive sizing.
+    The section should have a border at the top and bottom.
+    The announcement text should be easily customizable via block settings.
+    The block should allow configuration of scroll speed, direction, repeat count, font size, font weight, text color, background color, and vertical padding.
+    The block should be accessible and support pausing on hover.
+    Generate the Liquid, CSS, JavaScript, and schema required for this Shopify block, following best practices for Shopify theme development.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-scrolling-announcement-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    background-color: {{ block.settings.background_color }};
+    border-top: 1px solid {{ block.settings.border_color }};
+    border-bottom: 1px solid {{ block.settings.border_color }};
+    padding: {{ block.settings.vertical_padding }}px 0;
+  }
+
+  .ai-scrolling-announcement__track-{{ ai_gen_id }} {
+    display: flex;
+    width: max-content;
+    gap: {{ block.settings.spacing_between_items }}px;
+  }
+
+  .ai-scrolling-announcement__item-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.font_size }}px;
+    font-weight: {{ block.settings.font_weight }};
+    text-transform: {{ block.settings.text_transform }};
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ai-scrolling-announcement__track-{{ ai_gen_id }} {
+      animation: none !important;
+    }
+  }
+{% endstyle %}
+
+<scrolling-announcement-{{ ai_gen_id }}
+  class="ai-scrolling-announcement-{{ ai_gen_id }}"
+  data-speed="{{ block.settings.scroll_speed }}"
+  data-direction="{{ block.settings.scroll_direction }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-scrolling-announcement__track-{{ ai_gen_id }}">
+    {% for i in (1..block.settings.repeat_count) %}
+      <div class="ai-scrolling-announcement__item-{{ ai_gen_id }}">
+        {{ block.settings.announcement_text }}
+      </div>
+    {% endfor %}
+  </div>
+</scrolling-announcement-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ScrollingAnnouncement{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.track = this.querySelector('.ai-scrolling-announcement__track-{{ ai_gen_id }}');
+        this.isPaused = false;
+        this.animationId = null;
+        this.currentPosition = 0;
+      }
+
+      connectedCallback() {
+        this.speed = parseFloat(this.dataset.speed) || 50;
+        this.direction = this.dataset.direction || 'left';
+        
+        this.cloneItems();
+        this.startScrolling();
+        this.setupHoverPause();
+      }
+
+      cloneItems() {
+        const items = Array.from(this.track.children);
+        items.forEach(item => {
+          const clone = item.cloneNode(true);
+          this.track.appendChild(clone);
+        });
+      }
+
+      startScrolling() {
+        const scroll = () => {
+          if (!this.isPaused) {
+            const trackWidth = this.track.scrollWidth / 2;
+            
+            if (this.direction === 'left') {
+              this.currentPosition -= this.speed / 60;
+              if (Math.abs(this.currentPosition) >= trackWidth) {
+                this.currentPosition = 0;
+              }
+            } else {
+              this.currentPosition += this.speed / 60;
+              if (this.currentPosition >= 0) {
+                this.currentPosition = -trackWidth;
+              }
+            }
+            
+            this.track.style.transform = `translateX(${this.currentPosition}px)`;
+          }
+          
+          this.animationId = requestAnimationFrame(scroll);
+        };
+        
+        if (this.direction === 'right') {
+          this.currentPosition = -(this.track.scrollWidth / 2);
+        }
+        
+        this.animationId = requestAnimationFrame(scroll);
+      }
+
+      setupHoverPause() {
+        if (this.dataset.pauseOnHover !== 'false') {
+          this.addEventListener('mouseenter', () => {
+            this.isPaused = true;
+          });
+
+          this.addEventListener('mouseleave', () => {
+            this.isPaused = false;
+          });
+        }
+      }
+
+      disconnectedCallback() {
+        if (this.animationId) {
+          cancelAnimationFrame(this.animationId);
+        }
+      }
+    }
+
+    customElements.define('scrolling-announcement-{{ ai_gen_id }}', ScrollingAnnouncement{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Scrolling announcement",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Announcement text",
+      "default": "- FREE SHIPPING OVER $150 AUD"
+    },
+    {
+      "type": "range",
+      "id": "repeat_count",
+      "label": "Repeat count",
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Animation"
+    },
+    {
+      "type": "range",
+      "id": "scroll_speed",
+      "label": "Scroll speed",
+      "min": 10,
+      "max": 200,
+      "step": 10,
+      "default": 50
+    },
+    {
+      "type": "select",
+      "id": "scroll_direction",
+      "label": "Scroll direction",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "label": "Font size",
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "select",
+      "id": "text_transform",
+      "label": "Text case",
+      "options": [
+        {
+          "value": "none",
+          "label": "Default"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "vertical_padding",
+      "label": "Vertical padding",
+      "min": 5,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "spacing_between_items",
+      "label": "Spacing between items",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scrolling announcement"
+    }
+  ]
+}
 {% endschema %}
