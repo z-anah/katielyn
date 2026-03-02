@@ -21,9 +21,9 @@
     const res = await fetch('https://ipapi.co/json/');
     const data = await res.json();
 
-    if (data.country === 'ID') {
+    {% comment %} if (data.country === 'ID') {
       document.getElementById('country-overlay').style.display = 'flex';
-    }
+    } {% endcomment %}
   } catch (e) {
     console.error('Geo check failed');
   }
