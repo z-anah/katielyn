@@ -23,6 +23,9 @@
     const res = await fetch('https://ipapi.co/json/');
     const data = await res.json();
 
+
+  console.log(Shopify.country)
+
     if (data && data.country === 'ID') {
       document.getElementById('country-overlay').style.display = 'flex';
     }
