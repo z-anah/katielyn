@@ -18,19 +18,18 @@
 </div>
 
 <script>
-(async function () {
-  try {
-    const res = await fetch('https://ipapi.co/json/');
-    const data = await res.json();
+  (async function () {
+    try {
+      const res = await fetch('https://ipapi.co/json/');
+      const data = await res.json();
 
+      //  console.log(Shopify.country);
 
-  console.log(Shopify.country)
-
-    if (data && data.country === 'ID') {
-      document.getElementById('country-overlay').style.display = 'flex';
+      if (data && data.country === 'ID') {
+        document.getElementById('country-overlay').style.display = 'flex';
+      }
+    } catch (e) {
+      console.error('Geo check failed');
     }
-  } catch (e) {
-    console.error('Geo check failed');
-  }
-})();
+  })();
 </script>
