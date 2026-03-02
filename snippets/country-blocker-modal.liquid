@@ -19,16 +19,26 @@
 </div>
 
 <script>
-  (async function () {
-    try {
-      const res = await fetch('https://ipapi.co/json/');
-      const data = await res.json();
+(async function () {
+  try {
+    // Avoid showing popup again if country already chosen
+    if (localStorage.getItem('countrySelected')) return;
 
-      if (data.country === 'ID') {
-        document.getElementById('country-overlay').style.display = 'flex';
-      }
-    } catch (e) {
-      console.error('Geo check failed');
+    const res = await fetch('https://ipapi.co/json/');
+    const data = await res.json();
+
+    if (data && data.country === 'ID') {
+      document.getElementById('country-overlay').style.display = 'flex';
     }
-  })();
+
+    // Mark as selected after submit
+    document.querySelector('#country-modal form')
+      .addEventListener('submit', function () {
+        localStorage.setItem('countrySelected', 'true');
+      });
+
+  } catch (e) {
+    console.error('Country blocker failed');
+  }
+})();
 </script>
