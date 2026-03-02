@@ -3,8 +3,7 @@
     <h2>We don’t ship to Indonesia</h2>
     <p>Please select your shipping country.</p>
 
-    <form method="post" action="/localization">
-      <input type="hidden" name="form_type" value="localization">
+    {% form 'localization' %}
       <input type="hidden" name="return_to" value="{{ request.path }}">
 
       <select name="country_code" required>
@@ -14,21 +13,21 @@
       </select>
 
       <button type="submit">Shop Now</button>
-    </form>
+    {% endform %}
   </div>
 </div>
 
 <script>
-  (async function () {
-    try {
-      const res = await fetch('https://ipapi.co/json/');
-      const data = await res.json();
+(async function () {
+  try {
+    const res = await fetch('https://ipapi.co/json/');
+    const data = await res.json();
 
-      if (data.country === 'ID') {
-        document.getElementById('country-overlay').style.display = 'flex';
-      }
-    } catch (e) {
-      console.error('Geo check failed');
+    if (data && data.country === 'ID') {
+      document.getElementById('country-overlay').style.display = 'flex';
     }
-  })();
+  } catch (e) {
+    console.error('Geo check failed');
+  }
+})();
 </script>
