@@ -1,0 +1,18 @@
+{% if localization.country.iso_code == 'ID' %}
+<div id="country-overlay">
+  <div id="country-modal">
+    <h2>We don’t ship to Indonesia</h2>
+    <p>Please select your shipping country.</p>
+
+    <form method="post" action="/localization">
+      <select name="country_code" required>
+        <option value="AU">Australia ($)</option>
+        <option value="SG">Singapore ($)</option>
+        <option value="US">United States ($)</option>
+      </select>
+
+      <button type="submit">Shop Now</button>
+    </form>
+  </div>
+</div>
+{% endif %}
