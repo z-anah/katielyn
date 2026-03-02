@@ -19,26 +19,33 @@
 
 <script>
 (async function () {
-  // Do not show again if already chosen
-  console.log(localStorage.getItem('countrySelected'))
-  if (localStorage.getItem('countrySelected') === 'true') return;
-
   try {
+    // If user already chose a country, do nothing
+    const savedCountry = localStorage.getItem('selectedCountry');
+    if (savedCountry) return;
+
+    // Detect real IP country
     const res = await fetch('https://ipapi.co/json/');
     const data = await res.json();
 
+    // Show popup only for Indonesia
     if (data && data.country === 'ID') {
       document.getElementById('country-overlay').style.display = 'flex';
     }
 
+    // Save chosen country on submit
     document.addEventListener('submit', function (e) {
-      if (e.target.closest('#country-modal')) {
-        localStorage.setItem('countrySelected', 'true');
+      const form = e.target.closest('#country-modal form');
+      if (!form) return;
+
+      const select = form.querySelector('select[name="country_code"]');
+      if (select && select.value) {
+        localStorage.setItem('selectedCountry', select.value);
       }
     });
 
   } catch (e) {
-    console.error('Geo check failed');
+    console.error('Country selection error');
   }
 })();
 </script>
