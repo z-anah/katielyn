@@ -297,56 +297,73 @@
         "padding-block-end": 48
       }
     },
-    "1772435912bb72ad82": {
+    "1772436305ded62e45": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_03a5a68_ggx7EM": {
-          "type": "ai_gen_block_03a5a68",
+        "ai_gen_block_4a5c3c3_UND8Er": {
+          "type": "ai_gen_block_4a5c3c3",
           "settings": {
-            "heading": "Featured Collections",
+            "show_header": true,
+            "subheading": "SHOP OUR",
+            "heading": "NEW ARRIVALS",
+            "subheading_size": 12,
+            "heading_size": 32,
+            "header_spacing": 40,
             "collection": "frontpage",
             "products_to_show": 8,
-            "show_cta_button": true,
-            "cta_text": "Shop New Arrivals",
-            "cta_link": "",
+            "card_width_mobile": 250,
+            "card_width_tablet": 280,
+            "card_width_desktop": 300,
+            "card_gap": 10,
+            "card_padding": 10,
+            "card_border_width": 3,
             "show_second_image": true,
+            "image_aspect_ratio": 150,
+            "product_title_size": 12,
+            "price_size": 14,
             "show_badges": true,
-            "show_color_swatches": true,
+            "new_badge_text": "NEW & EXCLUSIVE",
+            "bestseller_badge_text": "BEST-SELLER",
+            "badge_font_size": 10,
             "show_quick_add": true,
-            "show_navigation": true,
-            "desktop_width_percent": 100,
-            "section_padding": 40,
-            "card_gap": 16,
-            "card_border_radius": 8,
-            "heading_size": 32,
-            "heading_color": "#000000",
+            "quick_add_text": "Quick Add",
+            "quick_add_font_size": 12,
+            "quick_add_border_width": 1,
+            "show_color_variants": true,
+            "max_color_variants": 5,
+            "variant_dot_size": 16,
+            "show_cta": true,
+            "cta_text": "SHOP NEW ARRIVALS",
+            "cta_link": "",
+            "cta_font_size": 14,
+            "cta_border_width": 2,
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "carousel_spacing": 40,
+            "border_width": 1,
+            "background_color": "#f5f5f5",
             "text_color": "#000000",
-            "price_color": "#000000",
-            "link_hover_color": "#333333",
+            "border_color": "#000000",
             "card_background": "#ffffff",
-            "badge_background": "#000000",
-            "badge_text_color": "#ffffff",
-            "badge_border_radius": 4,
-            "variant_dot_size": 20,
-            "variant_border_color": "#e6e6e6",
-            "variant_border_hover_color": "#000000",
-            "button_background": "#000000",
-            "button_text_color": "#ffffff",
-            "button_hover_background": "#333333",
-            "button_border_radius": 4,
-            "cta_background": "#000000",
-            "cta_text_color": "#ffffff",
-            "cta_hover_background": "#333333",
-            "cta_border_radius": 4,
-            "nav_background": "#ffffff",
-            "nav_color": "#000000",
-            "nav_hover_background": "#f5f5f5"
+            "card_border_color": "#1d3686",
+            "badge_background": "#e8e8e8",
+            "badge_text_color": "#333333",
+            "quick_add_background": "#ffffff",
+            "quick_add_text_color": "#000000",
+            "quick_add_border_color": "#000000",
+            "quick_add_hover_background": "#000000",
+            "quick_add_hover_text_color": "#ffffff",
+            "cta_background": "#ffffff",
+            "cta_text_color": "#000000",
+            "cta_border_color": "#000000",
+            "cta_hover_background": "#000000",
+            "cta_hover_text_color": "#ffffff"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_03a5a68_ggx7EM"
+        "ai_gen_block_4a5c3c3_UND8Er"
       ],
       "settings": {
         "content_direction": "column",
@@ -380,6 +397,6 @@
   "order": [
     "hero_jVaWmY",
     "product_list_fa6P9H",
-    "1772435912bb72ad82"
+    "1772436305ded62e45"
   ]
 }
