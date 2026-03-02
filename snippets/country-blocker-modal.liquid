@@ -17,6 +17,7 @@
 
 <script>
 (function () {
+  console.log(Shopify.country)
   if (window.Shopify && Shopify.country === 'ID') {
     document.getElementById('country-overlay').style.display = 'flex';
   }
