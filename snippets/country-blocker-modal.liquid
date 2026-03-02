@@ -20,6 +20,7 @@
 <script>
 (async function () {
   // Do not show again if already chosen
+  console.log(localStorage.getItem('countrySelected'))
   if (localStorage.getItem('countrySelected') === 'true') return;
 
   try {
