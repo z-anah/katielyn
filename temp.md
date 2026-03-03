@@ -1,115 +1,168 @@
-Background
+Fonts
 
-#F8F9FF
-Headings
+Body
 
-#191C20
-Text
+Inter
+Subheading
 
-#191C20
-Links
+Inter
+Heading
 
-#191C20
-Hover links
+Inter
+Accent
 
-#37618E
-Borders
+Inter
+Text presets
 
-#73797F
-Shadow
+Sizes automatically scale for all screen sizes
 
-#000000
-Primary button
+Paragraph
 
-Background
+Size
 
-#37618E
-Text
+14px
+14px
+Line height
 
-#FFFFFF
-Borders
+Loose
+Loose
+Heading 1
 
-#73797F
-Hover background
+Font
 
-#D2E4FF
-Hover text
+Heading
 
-#00293A
-Hover borders
+Accent
+Size
 
-#73797F
-Secondary button
+56px
+56px
+Line height
 
-Background
+Tight
+Tight
+Letter spacing
 
-#D7E3F8
-Text
+Normal
+Normal
+Case
 
-#3C4858
-Borders
+Default
 
-#73797F
-Hover background
+Uppercase
+Heading 2
 
-#BBC7DB
-Hover text
+Font
 
-#FFFFFF
-Hover borders
+Heading
 
-#73797F
-Inputs
+Accent
+Size
 
-Background
+48px
+48px
+Line height
 
-#FFFFFF
-Text
+Tight
+Tight
+Letter spacing
 
-#191C20
-Borders
+Normal
+Normal
+Case
 
-#C3C6CF
-Hover background
+Default
 
-#F2F3FA
-Variants
+Uppercase
+Heading 3
 
-Background
+Font
 
-#D2E4FF
-Text
+Heading
+Heading
+Size
 
-#00293A
-Borders
+32px
+32px
+Line height
 
-#73797F
-Hover background
+Normal
+Normal
+Letter spacing
 
-#A1CAFD
-Hover text
+Normal
+Normal
+Case
 
-#FFFFFF
-Hover borders
+Default
 
-#73797F
-Selected variants
+Uppercase
+Heading 4
 
-Background
+Font
 
-#37618E
-Text
+Heading
+Heading
+Size
 
-#FFFFFF
-Borders
+24px
+24px
+Line height
 
-#37618E
-Hover background
+Tight
+Tight
+Letter spacing
 
-#1A4975
-Hover text
+Normal
+Normal
+Case
 
-#D2E4FF
-Hover borders
+Default
 
-#1A4975
+Uppercase
+Heading 5
+
+Font
+
+Subheading
+Subheading
+Size
+
+14px
+14px
+Line height
+
+Loose
+Loose
+Letter spacing
+
+Normal
+Normal
+Case
+
+Default
+
+Uppercase
+Heading 6
+
+Font
+
+Subheading
+Subheading
+Size
+
+12px
+12px
+Line height
+
+Loose
+Loose
+Letter spacing
+
+Normal
+Normal
+Case
+
+Default
+
+Uppercase
