@@ -1,3 +1,5 @@
+
+
 {% capture children %}
   {% content_for 'blocks' %}
 {% endcapture %}
@@ -346,49 +348,76 @@
       "unit": "px",
       "default": 0
     },
-
-    /* ───── additional controls ───── */
     {
-      "type": "select",
-      "id": "border_vertical",
-      "label": "t:settings.borders_vertical",
-      "options": [
-        { "value": "none",  "label": "t:options.none" },
-        { "value": "solid", "label": "t:options.solid" }
-      ],
-      "default": "none"
+      "type": "checkbox",
+      "id": "toggle_overlay",
+      "label": "t:settings.background_overlay"
     },
     {
-      "type": "range",
-      "id": "border_vertical_width",
-      "min": 0,
-      "max": 10,
-      "step": 0.5,
-      "unit": "px",
-      "label": "t:settings.border_width",
-      "default": 1,
-      "visible_if": "{{ section.settings.border_vertical != 'none' }}"
+      "type": "color",
+      "id": "overlay_color",
+      "label": "t:settings.overlay_color",
+      "alpha": true,
+      "default": "#00000026",
+      "visible_if": "{{ section.settings.toggle_overlay }}"
     },
     {
       "type": "select",
-      "id": "border_horizontal",
-      "label": "t:settings.borders_horizontal",
+      "id": "overlay_style",
+      "label": "t:settings.overlay_style",
       "options": [
-        { "value": "none",  "label": "t:options.none" },
-        { "value": "solid", "label": "t:options.solid" }
+        {
+          "value": "solid",
+          "label": "t:options.solid"
+        },
+        {
+          "value": "gradient",
+          "label": "t:options.gradient"
+        }
       ],
-      "default": "none"
+      "default": "solid",
+      "visible_if": "{{ section.settings.toggle_overlay }}"
+    },
+    {
+      "type": "select",
+      "id": "gradient_direction",
+      "label": "t:settings.gradient_direction",
+      "options": [
+        {
+          "value": "to top",
+          "label": "t:options.up"
+        },
+        {
+          "value": "to bottom",
+          "label": "t:options.down"
+        }
+      ],
+      "default": "to top",
+      "visible_if": "{{ section.settings.toggle_overlay and section.settings.overlay_style == 'gradient' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
     },
     {
       "type": "range",
-      "id": "border_horizontal_width",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
       "min": 0,
-      "max": 10,
-      "step": 0.5,
+      "max": 100,
+      "step": 1,
       "unit": "px",
-      "label": "t:settings.border_width",
-      "default": 1,
-      "visible_if": "{{ section.settings.border_horizontal != 'none' }}"
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
     }
   ],
   "presets": [
