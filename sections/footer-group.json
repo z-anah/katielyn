@@ -113,7 +113,10 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "mobile_font_size": 10,
+            "mobile_input_height": 24,
+            "mobile_button_padding": 4
           },
           "blocks": {}
         }
@@ -334,7 +337,10 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "mobile_font_size": 14,
+            "mobile_input_height": 32,
+            "mobile_button_padding": 10
           },
           "blocks": {}
         }
