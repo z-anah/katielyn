@@ -187,7 +187,7 @@
         "text_FDPDcY"
       ],
       "custom_css": [
-        "div {border-top: 0.1px solid black; border-bottom: 0.1px solid black;}"
+        "div {border-top: 0.25px solid black; border-bottom: 0.25px solid black;}"
       ],
       "name": "t:names.rich_text_section",
       "settings": {
