@@ -91,29 +91,29 @@
           },
           "blocks": {}
         },
-        "email_signup_bgchzq": {
+        "email_signup_Xt3jdH": {
           "type": "email-signup",
           "name": "t:names.email_signup",
           "settings": {
-            "width": "fill",
+            "width": "custom",
             "custom_width": 50,
             "inherit_color_scheme": true,
             "color_scheme": "",
             "heading": "",
             "heading_preset": "h3",
-            "border_style": "none",
+            "border_style": "all",
             "border_width": 1,
-            "border_radius": 0,
+            "border_radius": 100,
             "input_type_preset": "paragraph",
             "style_class": "button",
             "display_type": "text",
             "label": "I WANT EXCLUSIVE ACCESS",
-            "integrated_button": true,
+            "integrated_button": false,
             "button_type_preset": "paragraph",
             "padding-block-start": 0,
             "padding-block-end": 0,
-            "padding-inline-start": 20,
-            "padding-inline-end": 10
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {}
         }
@@ -122,7 +122,7 @@
         "text_HcbecT",
         "text_Ry9CWE",
         "text_w8p6hx",
-        "email_signup_bgchzq"
+        "email_signup_Xt3jdH"
       ],
       "name": "t:names.email_signup",
       "settings": {
