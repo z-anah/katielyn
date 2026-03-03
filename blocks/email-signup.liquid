@@ -146,7 +146,6 @@
     }
   }
 
-  // --- Add or override for mobile only ---
   @media screen and (max-width: 749px) {
     .email-signup__heading {
       font-size: 1rem;
@@ -169,7 +168,7 @@
       height: 36px;
       min-width: 0;
       width: 100%;
-      border-radius: 6px;
+      border-radius: 0;
     }
     .email-signup__button {
       font-size: 0.95rem;
@@ -177,7 +176,7 @@
       height: 36px;
       min-width: 36px;
       width: auto;
-      border-radius: 6px;
+      border-radius: 0;
       margin-left: 4px;
     }
     .email-signup__button-icon {
@@ -189,7 +188,7 @@
 
   .email-signup__input-group--integrated {
     border-width: var(--border-width);
-    border-radius: var(--border-radius);
+    border-radius: 0;
     border-style: solid;
     border-color: var(--color-input-border);
     background-color: var(--color-input-background);
@@ -203,7 +202,7 @@
     flex: 1;
     min-width: 0;
     border-width: var(--border-width);
-    border-radius: var(--border-radius);
+    border-radius: 0;
     border-style: solid;
     border-color: var(--color-input-border);
 
@@ -326,7 +325,7 @@
     }
 
     &.button-unstyled {
-      border-radius: var(--border-radius);
+      border-radius: 0;
     }
 
     > .email-signup__button-icon {
