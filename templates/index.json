@@ -264,7 +264,7 @@
               "settings": {
                 "content_direction": "row",
                 "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
+                "horizontal_alignment": "space-between",
                 "vertical_alignment": "center",
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
@@ -324,8 +324,8 @@
                   "type": "swatches",
                   "name": "t:names.swatches",
                   "settings": {
-                    "product_swatches_alignment": "center",
-                    "product_swatches_alignment_mobile": "center",
+                    "product_swatches_alignment": "flex-end",
+                    "product_swatches_alignment_mobile": "flex-end",
                     "hide_padding": false,
                     "product_swatches_padding_top": 4,
                     "product_swatches_padding_bottom": 0,
