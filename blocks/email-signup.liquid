@@ -142,7 +142,7 @@
       .email-signup__input-group--integrated
     ) {
     @media screen and (max-width: 749px) {
-      flex-direction: column;
+      flex-direction: row;
     }
   }
 
@@ -395,6 +395,12 @@
 
     .email-signup__input-group--underline {
       margin-bottom: 4px !important;
+    }
+
+    /* Non-integrated: side-by-side at 50% each */
+    .email-signup__input-group:not(.email-signup__input-group--integrated) .email-signup__input,
+    .email-signup__input-group:not(.email-signup__input-group--integrated) .email-signup__button {
+      width: 50% !important;
     }
 
     /* Make integrated button height smaller on mobile */
