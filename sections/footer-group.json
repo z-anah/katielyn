@@ -113,10 +113,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "mobile_font_size": 10,
-            "mobile_input_height": 24,
-            "mobile_button_padding": 4
+            "padding-inline-end": 0
           },
           "blocks": {}
         }
@@ -329,7 +326,7 @@
             "border_width": 1,
             "border_radius": 100,
             "input_type_preset": "paragraph",
-            "style_class": "button-unstyled",
+            "style_class": "button",
             "display_type": "arrow",
             "label": "Sign up",
             "integrated_button": true,
@@ -337,10 +334,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "mobile_font_size": 14,
-            "mobile_input_height": 32,
-            "mobile_button_padding": 10
+            "padding-inline-end": 0
           },
           "blocks": {}
         }
