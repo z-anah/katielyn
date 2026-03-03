@@ -1,17 +1,3 @@
-{% doc %}
-  @prompt
-    Create a Shopify section block that displays a horizontally scrolling announcement bar, similar to the following HTML structure for mobile, tablet, and desktop:
-    
-    The section should have a unique ID and the class "shopify-section--scrolling-content".
-    It should include a <style> block for responsive font size and spacing using CSS clamp().
-    The main content is a horizontally scrolling marquee with repeated announcement text (e.g., "- FREE SHIPPING OVER $150 AUD").
-    The marquee should be visually consistent across mobile, tablet, and desktop, with responsive sizing.
-    The section should have a border at the top and bottom.
-    The announcement text should be easily customizable via block settings.
-    The block should allow configuration of scroll speed, direction, repeat count, font size, font weight, text color, background color, and vertical padding.
-    The block should be accessible and support pausing on hover.
-    Generate the Liquid, CSS, JavaScript, and schema required for this Shopify block, following best practices for Shopify theme development.
-{% enddoc %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
 {% style %}
@@ -19,13 +5,13 @@
     display: block;
     width: 100%;
     overflow: hidden;
-    background: {{ block.settings.background | default: 'background-1' | color_scheme_bg }};
+    background: {{ block.settings.background_color }};
     padding: {{ block.settings.vertical_padding }}px 0;
     {% if block.settings.border_top_enable %}
-      border-top: {{ block.settings.border_top_thickness }}px solid {{ block.settings.border_top_color | default: 'border-1' | color_scheme_border }};
+      border-top: {{ block.settings.border_top_thickness }}px solid {{ block.settings.border_top_color }};
     {% endif %}
     {% if block.settings.border_bottom_enable %}
-      border-bottom: {{ block.settings.border_bottom_thickness }}px solid {{ block.settings.border_bottom_color | default: 'border-1' | color_scheme_border }};
+      border-bottom: {{ block.settings.border_bottom_thickness }}px solid {{ block.settings.border_bottom_color }};
     {% endif %}
   }
 
@@ -39,7 +25,7 @@
     display: inline-flex;
     align-items: center;
     white-space: nowrap;
-    color: {{ block.settings.text | default: 'text' | color_scheme_text }};
+    color: {{ block.settings.text_color }};
     font-size: {{ block.settings.font_size }}px;
     font-weight: {{ block.settings.font_weight }};
     text-transform: {{ block.settings.text_transform }};
@@ -261,19 +247,19 @@
     },
     {
       "type": "header",
-      "content": "Colors & Scheme"
+      "content": "Colors"
     },
     {
-      "type": "color_scheme",
-      "id": "background",
-      "label": "Background",
-      "default": "background-1"
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#000000"
     },
     {
-      "type": "color_scheme",
-      "id": "text",
-      "label": "Text",
-      "default": "text"
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
     },
     {
       "type": "header",
@@ -286,10 +272,10 @@
       "default": true
     },
     {
-      "type": "color_scheme",
+      "type": "color",
       "id": "border_top_color",
       "label": "Top border color",
-      "default": "border-1"
+      "default": "#cccccc"
     },
     {
       "type": "range",
@@ -308,10 +294,10 @@
       "default": true
     },
     {
-      "type": "color_scheme",
+      "type": "color",
       "id": "border_bottom_color",
       "label": "Bottom border color",
-      "default": "border-1"
+      "default": "#cccccc"
     },
     {
       "type": "range",
