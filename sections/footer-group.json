@@ -95,25 +95,25 @@
           "type": "email-signup",
           "name": "t:names.email_signup",
           "settings": {
-            "width": "custom",
+            "width": "fill",
             "custom_width": 50,
             "inherit_color_scheme": true,
             "color_scheme": "",
             "heading": "",
             "heading_preset": "h3",
-            "border_style": "all",
+            "border_style": "none",
             "border_width": 1,
-            "border_radius": 100,
+            "border_radius": 0,
             "input_type_preset": "paragraph",
             "style_class": "button",
             "display_type": "text",
             "label": "I WANT EXCLUSIVE ACCESS",
-            "integrated_button": false,
+            "integrated_button": true,
             "button_type_preset": "paragraph",
             "padding-block-start": 0,
             "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-start": 20,
+            "padding-inline-end": 10
           },
           "blocks": {}
         }
