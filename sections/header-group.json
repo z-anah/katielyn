@@ -96,7 +96,7 @@
             "scroll_speed": 50,
             "scroll_direction": "left",
             "font_size": 14,
-            "font_weight": "400",
+            "font_weight": "500",
             "text_transform": "uppercase",
             "background_color": "#ffffff",
             "text_color": "#37618e",
