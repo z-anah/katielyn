@@ -121,7 +121,7 @@
     },
     "email_signup": {
       "label": "Email",
-      "placeholder": "Email address",
+      "placeholder": "Email",
       "success": "Thanks for subscribing!"
     },
     "filter": "Filter",
@@ -300,7 +300,7 @@
     "recipient_form_send_to": "Send to",
     "recipient_form_email_label": "Recipient’s email",
     "recipient_form_email_label_my_email": "My email",
-    "recipient_form_email_address": "Recipient email address",
+    "recipient_form_email_address": "Recipient email",
     "recipient_form_name_label": "Recipient name (optional)",
     "recipient_form_message": "Message (optional)",
     "recipient_form_characters_used": "{{ used_chars }}/{{ max_chars }} characters used",
