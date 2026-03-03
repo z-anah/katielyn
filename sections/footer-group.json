@@ -174,7 +174,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<h2>KATIE LYN</h2>",
+            "text": "<h1>KATIE LYN</h1>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
