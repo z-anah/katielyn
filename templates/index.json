@@ -667,8 +667,8 @@
               "name": "t:names.text",
               "settings": {
                 "text": "<p>We drop limited, exclusive garments . This carefully curated approach ensures that our customers have access to distinctive, one-of-a-kind pieces that resonate with our brand's essence, embodying the true spirit of Sasha Therese.</p>",
-                "width": "fit-content",
-                "max_width": "narrow",
+                "width": "100%",
+                "max_width": "none",
                 "alignment": "center",
                 "type_preset": "paragraph",
                 "font": "var(--font-body--family)",
