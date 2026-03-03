@@ -186,9 +186,7 @@
       "block_order": [
         "text_FDPDcY"
       ],
-      "custom_css": [
-        "div {border-top: 0.25px solid black; border-bottom: 0.25px solid black;}"
-      ],
+      "custom_css": [],
       "name": "t:names.rich_text_section",
       "settings": {
         "content_direction": "column",
