@@ -368,43 +368,33 @@
   }
 
   @media screen and (max-width: 749px) {
+    .email-signup-block,
+    .email-signup__heading,
+    .email-signup__form,
+    .email-signup__input-group,
+    .email-signup__input,
+    .email-signup__button,
+    .email-signup__message {
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
+      margin-top: 4px !important;
+      margin-bottom: 4px !important;
+      min-height: unset !important;
+      height: auto !important;
+    }
+
+    .email-signup__input,
+    .email-signup__button--text {
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
+    }
+
     .email-signup__heading {
-      font-size: 1rem;
-      padding-block: 4px;
-      margin-bottom: 4px;
+      padding-block: 8px !important;
     }
-    .email-signup__form {
-      flex-direction: column;
-      gap: 6px;
-    }
-    .email-signup__input-group {
-      flex-direction: row !important;
-      align-items: center;
-      gap: 4px;
-      padding: 0;
-      margin: 0;
-    }
-    .email-signup__input {
-      font-size: 0.95rem;
-      padding: 4px 8px;
-      height: 28px;
-      min-width: 0;
-      width: 100%;
-      border-radius: 0;
-    }
-    .email-signup__button {
-      font-size: 0.95rem;
-      padding: 4px 10px;
-      height: 28px;
-      min-width: 28px;
-      width: auto;
-      border-radius: 0;
-      margin-left: 2px;
-    }
-    .email-signup__button-icon {
-      width: 18px !important;
-      height: 18px !important;
-      padding: 0 !important;
+
+    .email-signup__input-group--underline {
+      margin-bottom: 4px !important;
     }
   }
 {% endstylesheet %}
