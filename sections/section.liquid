@@ -312,43 +312,16 @@
           "label": "t:options.solid"
         }
       ],
-      "default": "none"
+      "default": "none",
+      "visible_if": "{{ section.settings.border_vertical == 'none' and section.settings.border_horizontal == 'none' }}"
     },
     {
-      "type": "range",
-      "id": "border_width",
-      "min": 0,
-      "max": 10,
-      "step": 0.5,
-      "unit": "px",
-      "label": "t:settings.border_width",
-      "default": 1,
-      "visible_if": "{{ section.settings.border != 'none' }}"
-    },
-    {
-      "type": "range",
-      "id": "border_opacity",
-      "min": 0,
-      "max": 100,
-      "step": 1,
-      "unit": "%",
-      "label": "t:settings.border_opacity",
-      "default": 100,
-      "visible_if": "{{ section.settings.border != 'none' }}"
-    },
-    {
-      "type": "range",
+      "type": "select",
       "id": "border_vertical",
       "label": "t:settings.border_vertical",
       "options": [
-        {
-          "value": "none",
-          "label": "t:options.none"
-        },
-        {
-          "value": "solid",
-          "label": "t:options.solid"
-        }
+        { "value": "none",  "label": "t:options.none" },
+        { "value": "solid", "label": "t:options.solid" }
       ],
       "default": "none"
     },
@@ -379,14 +352,8 @@
       "id": "border_horizontal",
       "label": "t:settings.border_horizontal",
       "options": [
-        {
-          "value": "none",
-          "label": "t:options.none"
-        },
-        {
-          "value": "solid",
-          "label": "t:options.solid"
-        }
+        { "value": "none",  "label": "t:options.none" },
+        { "value": "solid", "label": "t:options.solid" }
       ],
       "default": "none"
     },
@@ -411,6 +378,16 @@
       "label": "t:settings.border_horizontal_opacity",
       "default": 100,
       "visible_if": "{{ section.settings.border_horizontal != 'none' }}"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "t:settings.border_radius",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
     },
     {
       "type": "checkbox",
@@ -1827,3 +1804,20 @@
   ]
 }
 {% endschema %}
+{%- assign v_style = "" -%}
+{%- if section.settings.border_vertical != 'none' -%}
+  {%- assign v_opacity = section.settings.border_vertical_opacity | divided_by: 100 -%}
+  {%- assign color = "rgba({{ settings.color_scheme_border }},#{v_opacity})" -%}
+  {%- assign v_style = "border-left: #{section.settings.border_vertical_width}px #{section.settings.border_vertical} #{color}; border-right: #{section.settings.border_vertical_width}px #{section.settings.border_vertical} #{color};" -%}
+{%- endif -%}
+
+{%- assign h_style = "" -%}
+{%- if section.settings.border_horizontal != 'none' -%}
+  {%- assign h_opacity = section.settings.border_horizontal_opacity | divided_by: 100 -%}
+  {%- assign color = "rgba({{ settings.color_scheme_border }},#{h_opacity})" -%}
+  {%- assign h_style = "border-top: #{section.settings.border_horizontal_width}px #{section.settings.border_horizontal} #{color}; border-bottom: #{section.settings.border_horizontal_width}px #{section.settings.border_horizontal} #{color};" -%}
+{%- endif -%}
+
+<div class="section-wrapper" style="{{ v_style }} {{ h_style }}">
+  {{ children }}
+</div>
