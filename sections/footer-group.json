@@ -358,7 +358,7 @@
         "footer_copyright_jweRK8": {
           "type": "footer-copyright",
           "settings": {
-            "show_powered_by": true,
+            "show_powered_by": false,
             "font_size": "0.75rem",
             "case": "none"
           },
@@ -449,7 +449,7 @@
     "section_VwFnxp",
     "section_tbRnr7",
     "footer_m9NzUG",
-    "footer_utilities_jLGE8U",
-    "footer_QwVigK"
+    "footer_QwVigK",
+    "footer_utilities_jLGE8U"
   ]
 }
