@@ -1,7 +1,7 @@
 {% assign block_settings = block.settings %}
 <div
   class="email-signup-block size-style spacing-style"
-  style="{% render 'size-style', settings: block_settings %}{% render 'spacing-style', settings: block_settings %}; --mobile-font-size: {{ block_settings.mobile_font_size | default: 14 }}px; --mobile-input-height: {{ block.settings.mobile_input_height | default: 32 }}px; --mobile-button-padding: {{ block.settings.mobile_button_padding | default: 10 }}px;"
+  style="{% render 'size-style', settings: block_settings %}{% render 'spacing-style', settings: block_settings %}"
   {{ block.shopify_attributes }}
 >
   {% if block_settings.heading != blank %}
@@ -146,12 +146,13 @@
     }
   }
 
+  // --- Add or override for mobile only ---
   @media screen and (max-width: 749px) {
     .email-signup__heading {
-      font-size: var(--mobile-font-size, 14px);
-      padding-block: 4px;
+      font-size: 1rem;
+      padding-block: 6px;
       text-align: left;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
     .email-signup__form {
       flex-direction: column;
@@ -159,25 +160,25 @@
     .email-signup__input-group {
       flex-direction: row !important;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
       padding: 0;
     }
     .email-signup__input {
-      font-size: var(--mobile-font-size, 14px);
-      padding: 6px 8px;
-      height: var(--mobile-input-height, 32px);
+      font-size: 0.95rem;
+      padding: 8px 10px;
+      height: 36px;
       min-width: 0;
       width: 100%;
-      border-radius: 5px;
+      border-radius: 6px;
     }
     .email-signup__button {
-      font-size: var(--mobile-font-size, 14px);
-      padding: 6px var(--mobile-button-padding, 10px);
-      height: var(--mobile-input-height, 32px);
-      min-width: 32px;
+      font-size: 0.95rem;
+      padding: 8px 14px;
+      height: 36px;
+      min-width: 36px;
       width: auto;
-      border-radius: 5px;
-      margin-left: 2px;
+      border-radius: 6px;
+      margin-left: 4px;
     }
     .email-signup__button-icon {
       width: 20px !important;
@@ -733,36 +734,6 @@
       "step": 1,
       "unit": "px",
       "default": 0
-    },
-    {
-      "type": "range",
-      "id": "mobile_font_size",
-      "label": "Mobile font size",
-      "min": 10,
-      "max": 24,
-      "step": 1,
-      "unit": "px",
-      "default": 14
-    },
-    {
-      "type": "range",
-      "id": "mobile_input_height",
-      "label": "Mobile input height",
-      "min": 24,
-      "max": 48,
-      "step": 1,
-      "unit": "px",
-      "default": 32
-    },
-    {
-      "type": "range",
-      "id": "mobile_button_padding",
-      "label": "Mobile button horizontal padding",
-      "min": 4,
-      "max": 24,
-      "step": 1,
-      "unit": "px",
-      "default": 10
     }
   ],
   "presets": [
