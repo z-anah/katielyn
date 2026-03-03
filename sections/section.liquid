@@ -1,5 +1,3 @@
-
-
 {% capture children %}
   {% content_for 'blocks' %}
 {% endcapture %}
@@ -340,13 +338,79 @@
     },
     {
       "type": "range",
-      "id": "border_radius",
-      "label": "t:settings.border_radius",
+      "id": "border_vertical",
+      "label": "t:settings.border_vertical",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.none"
+        },
+        {
+          "value": "solid",
+          "label": "t:options.solid"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "range",
+      "id": "border_vertical_width",
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
+      "unit": "px",
+      "label": "t:settings.border_vertical_width",
+      "default": 1,
+      "visible_if": "{{ section.settings.border_vertical != 'none' }}"
+    },
+    {
+      "type": "range",
+      "id": "border_vertical_opacity",
       "min": 0,
       "max": 100,
       "step": 1,
+      "unit": "%",
+      "label": "t:settings.border_vertical_opacity",
+      "default": 100,
+      "visible_if": "{{ section.settings.border_vertical != 'none' }}"
+    },
+    {
+      "type": "select",
+      "id": "border_horizontal",
+      "label": "t:settings.border_horizontal",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:options.none"
+        },
+        {
+          "value": "solid",
+          "label": "t:options.solid"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "range",
+      "id": "border_horizontal_width",
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
       "unit": "px",
-      "default": 0
+      "label": "t:settings.border_horizontal_width",
+      "default": 1,
+      "visible_if": "{{ section.settings.border_horizontal != 'none' }}"
+    },
+    {
+      "type": "range",
+      "id": "border_horizontal_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:settings.border_horizontal_opacity",
+      "default": 100,
+      "visible_if": "{{ section.settings.border_horizontal != 'none' }}"
     },
     {
       "type": "checkbox",
