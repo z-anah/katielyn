@@ -16,6 +16,11 @@
   if product.selected_or_first_available_variant.featured_media.preview_image == blank
     assign product_variant_media = product.featured_media.preview_image | image_url: width: 100
   endif
+  # Preorder logic: if out of stock and continue selling when out of stock
+  assign variant = product.selected_or_first_available_variant
+  if variant.available == false and variant.inventory_policy == 'continue'
+    assign add_to_cart_text = 'Preorder'
+  endif
 -%}
 
 <add-to-cart-component

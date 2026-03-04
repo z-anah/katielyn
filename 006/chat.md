@@ -355,3 +355,338 @@ Add country selection modal and persist selected country
 
 image.png 
 image.png
+
+
+Zaora Zulmianah Anah
+4:54 PM
+Set store and sender email to info@katielyn.com in Shopify settings
+
+2 files 
+image.png
+image.png
+Zaora Zulmianah Anah
+5:09 PM
+add trust badges section
+add newsletter
+add water mark
+
+image.png 
+image.png
+KT
+K Tshoji
+5:16 PM
+That’s good , but store location is goldcoast QLD Australia
+
+KT
+K Tshoji
+5:49 PM
+Could you connect the PayPal aswell
+
+Policy Reminder
+Paying outside of Upwork violates our Terms of Service and will result in account suspension and loss of Payment Protection.
+KT
+K Tshoji
+5:58 PM
+And we need to replace all the wording with new things can you use chat gpt to do that aswell
+
+Zaora Zulmianah Anah
+6:11 PM
+Understood
+
+KT
+K Tshoji
+Mar 2, 2026 | 5:16 PM
+That’s good , but store location is goldcoast QLD Australia
+
+Alright 👍
+
+KT
+K Tshoji
+Mar 2, 2026 | 5:58 PM
+And we need to replace all the wording with new things can you use chat gpt to do that aswell
+
+KT
+K Tshoji
+8:08 PM
+We need to liven the pages up a little make sure everything is active and smooth becasue I want technical stuff done on Tuesday because on the evening I’ll give you all the gallery photos and items we’re selling so the site is complete and marketing can commence
+
+Tuesday, Mar 03
+KT
+K Tshoji
+5:20 AM
+Create these pages add them to the bottom
+
+2 files 
+KatieLyn_Returns_Policy.pdf
+4 kB
+KatieLyn_Terms_and_Conditions_Detailed.pdf
+5 kB
+Add this to the bottom and remove the part that says powered by shopify
+
+IMG_3966.jpeg 
+IMG_3966.jpeg
+Just have the copyright tag 2026, Katielyn
+
+Zaora Zulmianah Anah
+5:41 AM
+Understood
+
+KT
+K Tshoji
+Mar 2, 2026 | 8:08 PM
+We need to liven the pages up a little make sure everything is active and smooth becasue I want technical stuff done on Tuesday because on the evening I’ll give you all the gallery photos and items we’re selling so the site is complete and marketing can commence
+
+Show more
+Well received
+
+KT
+K Tshoji
+Mar 3, 2026 | 5:20 AM
+Create these pages add them to the bottom
+
+KT
+K Tshoji
+6:26 AM
+Add a drop down on the side that once you click shops you get all the those options
+
+2 files 
+IMG_3971.jpeg
+IMG_3973.jpeg
+KT
+K Tshoji
+6:32 AM
+And can you make it so the button go the same shade of blue as the logo when they click or hover over them
+
+KT
+K Tshoji
+12:12 PM
+How is everything progressing ?
+
+Zaora Zulmianah Anah
+12:16 PM
+Added
+
+
+
+https://katielyn.com/policies/refund-policy
+https://katielyn.com/policies/terms-of-service
+
+Zaora Zulmianah Anah
+12:33 PM
+To enable Shopify Payments, I’ll need access to the Settings → Payments section in the Shopify admin. This is required because Shopify Payments must be set up by the store owner (or someone with full permissions), especially for business and banking verification.
+
+
+
+Could you please either:
+
+
+
+Grant me full admin access, or
+
+
+
+Temporarily go to Settings → Payments → Shopify Payments and complete the setup on your side (business details, bank account, identity verification)
+
+
+
+Once it’s enabled, I can continue configuring checkout, payments, and related features without issues.
+
+
+
+Let me know how you’d like to proceed.
+
+KT
+K Tshoji
+12:42 PM
+Ill grant you full permissions
+
+Okay done
+
+Remove the yellow area
+
+IMG_3976.jpeg 
+IMG_3976.jpeg
+Zaora Zulmianah Anah
+12:52 PM
+Yellow area deleted
+
+KT
+K Tshoji
+12:52 PM
+Make the “search box “ , the “ eye want exclusive access , the “email “ all smaller so they fit the page nicely right now it looks slightly too big and a little clunky
+
+IMG_3977.jpeg 
+IMG_3977.jpeg
+Zaora Zulmianah Anah
+12:52 PM
+Thank you
+
+KT
+K Tshoji
+Mar 3, 2026 | 12:46 PM
+Okay done
+
+KT
+K Tshoji
+2:41 PM
+Please try copy this sizing
+
+2 files 
+IMG_3982.jpeg
+IMG_3981.jpeg
+Zaora Zulmianah Anah
+3:29 PM
+Added Shop Menu
+Corrected Email
+
+3 files 
+katielyn.com_(iPhone 14 Pro Max) (1).png
+katielyn.com_(iPhone 14 Pro Max).png
+katielyn.com_(iPhone 14 Pro Max) (2).png
+Zaora Zulmianah Anah
+3:34 PM
+could you clarify more what this module is?
+what show in modal
+what should the user get after dubmitting
+
+KT
+K Tshoji
+Mar 2, 2026 | 5:16 PM
+That’s good , but store location is goldcoast QLD Australia
+
+KT
+K Tshoji
+3:37 PM
+Ah it’s okay just ignore that
+
+Zaora Zulmianah Anah
+3:41 PM
+image.png 
+image.png
+Zaora Zulmianah Anah
+3:48 PM
+Could you fill this
+
+image.png 
+image.png
+KT
+K Tshoji
+4:10 PM
+Yes
+
+Zaora Zulmianah Anah
+4:51 PM
+I didn't get the permission yet
+
+KT
+K Tshoji
+5:09 PM
+I’ll fill it out then
+
+KT
+K Tshoji
+5:17 PM
+Okay I gave you access to everything
+
+I did it
+
+Updated
+
+Zaora Zulmianah Anah
+6:16 PM
+For security and compliance reasons, payment setup needs to be completed directly from your Shopify admin.
+
+
+
+Please go to Settings → Payments, choose your preferred payment providers, and follow the on-screen steps to complete the setup.
+
+
+
+Once it’s done, let me know and I’ll proceed with the remaining configuration.
+
+KT
+K Tshoji
+6:24 PM
+Okay
+
+Zaora Zulmianah Anah
+6:49 PM
+What should I do next?
+
+KT
+K Tshoji
+6:51 PM
+I have set up payments
+
+We need to start placing items into the store
+
+So we can finish this
+
+Zaora Zulmianah Anah
+6:52 PM
+Yes payments updated
+
+KT
+K Tshoji
+Mar 3, 2026 | 6:51 PM
+I have set up payments
+
+katielyn.com_collections(iPhone 14 Pro Max).png 
+katielyn.com_collections(iPhone 14 Pro Max).png
+ok, Great, thank you for confirming.
+
+KT
+K Tshoji
+Mar 3, 2026 | 6:51 PM
+We need to start placing items into the store
+
+’m waiting for the item details/files. Once I receive them, I’ll proceed immediately
+
+KT
+K Tshoji
+6:54 PM
+I will forward momentarily
+
+Zaora Zulmianah Anah
+6:55 PM
+👍
+
+KT
+K Tshoji
+7:14 PM
+Here are 4 items so far just get them on the page first and I’ll have the rest ready tomorrow there will be a total of 12-15 items maximum so you can rest for now I’m sure we can get this done by tomorrow
+
+4 files 
+Photoroom_20260303_220924.png
+Photoroom_20260303_220920.png
+Photoroom_20260303_220722.png
+Photoroom_20260303_215310.png
+Zaora Zulmianah Anah
+7:18 PM
+Well received
+
+KT
+K Tshoji
+7:20 PM
+What time is it where you are ?
+
+Zaora Zulmianah Anah
+7:22 PM
+07:23 PM
+
+KT
+K Tshoji
+7:23 PM
+Okay you can rest for the evening, if you have any recommendations please let me know but I’ll have everything including pricing and what goes on what pages tomorrow
+
+Zaora Zulmianah Anah
+7:25 PM
+Okey, thank you. Just chat me when you need
+
+Zaora Zulmianah Anah
+10:02 PM
+Looking forward for the next steps
+
+katielyn.com_(iPhone 14 Pro Max) (3).png 
+katielyn.com_(iPhone 14 Pro Max) (3).png
+Thanks so much for the opportunity, Tshoji! I love fashion, so combining it with web development feels like a dream. I usually work on heavy office dashboards, so creating a soft, aesthetic website is such a refreshing change.
