@@ -135,12 +135,12 @@
           {% endif %}
           <span class="add-to-cart-text__content">
             <span>
-              {%- if current_variant.available -%}
+              {%- if current_variant.inventory_policy == 'continue' and current_variant.inventory_quantity <= 0 -%}
+                Preorder
+              {%- elsif current_variant.available -%}
                 {{- 'products.product.add_to_cart' | t -}}
               {%- elsif current_variant == blank -%}
                 {{- 'products.product.unavailable' | t -}}
-              {%- elsif current_variant.inventory_policy == 'continue' -%}
-                Preorder
               {%- else -%}
                 {{- 'products.product.sold_out' | t -}}
               {%- endif -%}

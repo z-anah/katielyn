@@ -16,9 +16,9 @@
   if product.selected_or_first_available_variant.featured_media.preview_image == blank
     assign product_variant_media = product.featured_media.preview_image | image_url: width: 100
   endif
-  # Preorder logic: if out of stock and continue selling when out of stock
+  # Preorder logic: inventory_policy == 'continue' with 0 stock (Shopify marks available=true in this case)
   assign variant = product.selected_or_first_available_variant
-  if variant.available == false and variant.inventory_policy == 'continue'
+  if variant.inventory_policy == 'continue' and variant.inventory_quantity <= 0
     assign add_to_cart_text = 'Preorder'
   endif
 -%}
