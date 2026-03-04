@@ -139,6 +139,8 @@
                 {{- 'products.product.add_to_cart' | t -}}
               {%- elsif current_variant == blank -%}
                 {{- 'products.product.unavailable' | t -}}
+              {%- elsif current_variant.inventory_policy == 'continue' -%}
+                Preorder
               {%- else -%}
                 {{- 'products.product.sold_out' | t -}}
               {%- endif -%}
