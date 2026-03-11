@@ -134,5 +134,38 @@
     {% endif %}
 
     {% render 'country-blocker-modal' %}
+
+        <!-- Promo Popup: 20% OFF All Clothing until March 19, 2026 -->
+    <div class="promo-popup-overlay" id="promo-popup-overlay" style="display:none;">
+      <div class="promo-popup-modal" role="dialog" aria-modal="true" aria-labelledby="promo-popup-title">
+        <button class="promo-popup-close" id="promo-popup-close" aria-label="Close">&times;</button>
+        <h2 class="promo-popup-title" id="promo-popup-title">20% OFF All Clothing</h2>
+        <p class="promo-popup-subtitle">Sale valid until March 19</p>
+        <a href="/collections/all" class="promo-popup-cta">Shop Now</a>
+      </div>
+    </div>
+    <script>
+      (function() {
+        var showAfter = 3000; // ms
+        var popupId = 'promo-popup-2026-03-19';
+        var endDate = new Date('2026-03-19T23:59:59');
+        function showPopup() {
+          if (sessionStorage.getItem(popupId)) return;
+          if (new Date() > endDate) return;
+          var overlay = document.getElementById('promo-popup-overlay');
+          if (overlay) overlay.style.display = 'flex';
+        }
+        function closePopup() {
+          var overlay = document.getElementById('promo-popup-overlay');
+          if (overlay) overlay.style.display = 'none';
+          sessionStorage.setItem(popupId, 'closed');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+          var closeBtn = document.getElementById('promo-popup-close');
+          if (closeBtn) closeBtn.addEventListener('click', closePopup);
+          setTimeout(showPopup, showAfter);
+        });
+      })();
+    </script>
   </body>
 </html>

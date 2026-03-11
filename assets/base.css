@@ -5010,3 +5010,74 @@ product-recommendations:has([data-has-recommendations='false']) {
 #country-modal button:hover {
   background: linear-gradient(135deg, #6aaebe, #4e97aa);
 }
+
+/* === Promo Popup Styles === */
+.promo-popup-overlay {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+.promo-popup-modal {
+  background: var(--color-background, #fff);
+  color: var(--color-foreground, #222);
+  border-radius: 1.2em;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  max-width: 90vw;
+  width: 350px;
+  padding: 2em 1.5em 1.5em 1.5em;
+  text-align: center;
+  font-family: inherit;
+  position: relative;
+}
+.promo-popup-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 0 0.5em 0;
+  font-family: inherit;
+}
+.promo-popup-subtitle {
+  font-size: 1em;
+  margin-bottom: 1.2em;
+  color: var(--color-foreground, #444);
+}
+.promo-popup-cta {
+  display: inline-block;
+  background: var(--color-button, #222);
+  color: var(--color-button-text, #fff);
+  padding: 0.75em 2em;
+  border-radius: 2em;
+  font-size: 1em;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.5em;
+  transition: background 0.2s;
+}
+.promo-popup-cta:hover,
+.promo-popup-cta:focus {
+  background: var(--color-button-hover, #444);
+}
+.promo-popup-close {
+  position: absolute;
+  top: 0.7em;
+  right: 1em;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: var(--color-foreground, #888);
+  cursor: pointer;
+  line-height: 1;
+}
+@media (max-width: 600px) {
+  .promo-popup-modal {
+    width: 95vw;
+    padding: 1.2em 0.5em 1em 0.5em;
+  }
+  .promo-popup-title {
+    font-size: 1.1em;
+  }
+}
