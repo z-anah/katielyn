@@ -1,0 +1,305 @@
+
+objective: increase clothing purchases on Shopify through Instagram Stories
+
+date_today: 2026-03-06
+
+shop:
+  platform: shopify
+  website: katilyn.com
+  owner:
+    name: tshoji
+    location: gold coast, australia
+  brand: katielyn
+  product: clothing
+
+channel:
+  primary: instagram stories
+  goal: drive traffic to shopify store and convert viewers into buyers
+
+audience:
+  location: australia
+  interests:
+    - fashion
+    - casual clothing
+    - online shopping
+  platform_behavior:
+    - heavy instagram usage
+    - responds to short visual content
+    - influenced by social proof and limited offers
+
+products:
+  - product_name: "Short Sleeve Body Shaper Dress"
+    handle: "short-sleeve-body-shaper-dress"
+    product_url: "https://katilyn.com/products/short-sleeve-body-shaper-dress"
+    category: "Apparel & Accessories > Clothing > Dresses"
+    description_short: "Smooths, sculpts, and enhances curves with breathable seamless fabric and medium compression."
+    price: "150.00"
+    compare_price: ""
+    variants:
+      sizes: ["10"]
+      colors: ["black"]
+    stock_total: 0
+    sku_list: []
+    images:
+      - "https://cdn.shopify.com/s/files/1/0769/7924/1060/files/katielyn-3.png?v=1772549419"
+    feature_highlights:
+      - "Body shaper dress with short sleeves"
+      - "Medium compression for tummy control"
+      - "Versatile for layering or standalone"
+    tags: []
+    status: active
+
+  - product_name: "Vintage Slim V‑Neck Top"
+    handle: "vintage-slim-v-neck-top"
+    product_url: "https://katilyn.com/products/vintage-slim-v-neck-top"
+    category: "Apparel & Accessories > Clothing > Clothing Tops > T-Shirts"
+    description_short: "Vintage slim fit long sleeve top with V-neckline and button collar for chic everyday style."
+    price: "150.00"
+    compare_price: ""
+    variants:
+      sizes: ["10"]
+      colors: ["beige"]
+    stock_total: 0
+    sku_list: []
+    images:
+      - "https://cdn.shopify.com/s/files/1/0769/7924/1060/files/Photoroom_20260304_122038.png?v=1772683677"
+    feature_highlights:
+      - "Classic slim V‑neck top"
+      - "Vintage appeal"
+      - "Flattering fit"
+    tags: []
+    status: active
+
+  - product_name: "Sports Dress Leggings"
+    handle: "sports-dress-leggings"
+    product_url: "https://katilyn.com/products/sports-dress-leggings"
+    category: "Apparel & Accessories > Clothing > Activewear"
+    description_short: "Two-piece sports outfit with tennis skirt and leggings for comfort and chic athletic style."
+    price: "150.00"
+    compare_price: ""
+    variants:
+      sizes: ["10"]
+      colors: ["white"]
+    stock_total: 0
+    sku_list: []
+    images:
+      - "https://cdn.shopify.com/s/files/1/0769/7924/1060/files/Photoroom_20260304_123856.png?v=1772683941"
+    feature_highlights:
+      - "Athletic leggings with dress-inspired design"
+      - "Breathable, four-way stretch"
+      - "Body-contouring fit"
+    tags: []
+    status: active
+
+  - product_name: "Halter Tank Top"
+    handle: "halter-tank-top"
+    product_url: "https://katilyn.com/products/halter-tank-top"
+    category: "Apparel & Accessories > Clothing > Clothing Tops > Tank Tops"
+    description_short: "100% cotton halter tank, soft and breathable with modern cut for summer layering or solo wear."
+    price: "150.00"
+    compare_price: ""
+    variants:
+      sizes: ["10"]
+      colors: ["blue", "navy"]
+    stock_total: 0
+    sku_list: []
+    images:
+      - "https://cdn.shopify.com/s/files/1/0769/7924/1060/files/Photoroom_20260304_122923.png?v=1772683261"
+    feature_highlights:
+      - "Chic halter tank top"
+      - "Modern cut"
+      - "Versatile for layering"
+    tags: []
+    status: active
+
+  - product_name: "Elegant Evening Gown"
+    handle: "elegant-evening-gown"
+    product_url: "https://katilyn.com/products/elegant-evening-gown"
+    category: "Apparel & Accessories > Clothing > Dresses"
+    description_short: "Elegant gown with plunging neckline, halter design, and pleated maxi skirt for formal occasions."
+    price: "246.89"
+    compare_price: ""
+    variants:
+      sizes: ["mini"]
+      colors: ["red"]
+    stock_total: 0
+    sku_list: []
+    images:
+      - "https://cdn.shopify.com/s/files/1/0769/7924/1060/files/Photoroom_20260304_120858.png?v=1772684853"
+    feature_highlights:
+      - "Sophisticated evening gown"
+      - "Timeless silhouette"
+      - "Perfect for formal events"
+    tags: []
+    status: active
+
+  - product_name: "Yellow Mini Bodycon"
+    handle: "yellow-mini-bodycon-dress"
+    product_url: "https://katilyn.com/products/yellow-mini-bodycon-dress"
+    category: "Apparel & Accessories > Clothing > Dresses"
+    description_short: "Yellow mini bodycon dress with lace trim, sleeveless cut, and slim fit for summer style."
+    price: "212.59"
+    compare_price: ""
+    variants:
+      sizes: ["mini"]
+      colors: ["yellow"]
+    stock_total: 0
+    sku_list: ["TSHIRT-WHT-01"]
+    images:
+      - "https://cdn.shopify.com/s/files/1/0769/7924/1060/files/Photoroom_20260304_123514.png?v=1772683312"
+    feature_highlights:
+      - "Vibrant yellow mini dress"
+      - "Flattering fit"
+      - "Perfect for bold nights out"
+    tags: []
+    status: active
+
+  - product_name: "Casual Cotton Shorts"
+    handle: "casual-cotton-shorts"
+    product_url: "https://katilyn.com/products/casual-cotton-shorts"
+    category: "Apparel & Accessories > Clothing > Shorts > Bermudas"
+    description_short: "Breathable cotton shorts with elastic waistband and relaxed fit for summer comfort."
+    price: "117.64"
+    compare_price: ""
+    variants:
+      sizes: []
+      colors: ["beige", "white", "pink"]
+    stock_total: 0
+    sku_list: []
+    images:
+      - "https://cdn.shopify.com/s/files/1/0769/7924/1060/files/Photoroom_20260304_122038.png?v=1772683677"
+    feature_highlights:
+      - "Lightweight cotton shorts"
+      - "Everyday comfort"
+      - "Ideal for casual outings"
+    tags: []
+    status: active
+
+  - product_name: "Y2K Lounge Shorts"
+    handle: "y2k-lounge-shorts"
+    product_url: "https://katilyn.com/products/y2k-lounge-shorts"
+    category: "Apparel & Accessories > Clothing > Shorts > Short Trousers"
+    description_short: "Y2K-inspired striped lounge shorts with lace trim and elastic waistband for relaxed summer style."
+    price: "109.77"
+    compare_price: ""
+    variants:
+      sizes: []
+      colors: ["striped"]
+    stock_total: 0
+    sku_list: []
+    images:
+      - "https://cdn.shopify.com/s/files/1/0769/7924/1060/files/Photoroom_20260304_122746.png?v=1772683705"
+    feature_highlights:
+      - "Casual lounge shorts"
+      - "Y2K vibe"
+      - "Loose fit for comfort"
+    tags: []
+    status: active
+
+  - product_name: "Y2K Slim Tee"
+    handle: "y2k-slim-tee"
+    product_url: "https://katilyn.com/products/y2k-slim-tee"
+    category: "Apparel & Accessories > Clothing > Clothing Tops > T-Shirts"
+    description_short: "Retro-inspired slim tee with O-neck, short sleeves, and Y2K aesthetic for everyday comfort."
+    price: "146.78"
+    compare_price: ""
+    variants:
+      sizes: []
+      colors: ["pink", "white"]
+    stock_total: 0
+    sku_list: []
+    images:
+      - "https://cdn.shopify.com/s/files/1/0769/7924/1060/files/Photoroom_20260304_115949.png?v=1772683317"
+    feature_highlights:
+      - "Slim fit"
+      - "Y2K aesthetic"
+      - "Breathable knit"
+    tags: []
+    status: active
+
+  - product_name: "Chest Buckle Crop Top"
+    handle: "chest-buckle-crop-top"
+    product_url: "https://katilyn.com/products/chest-buckle-crop-top"
+    category: "Apparel & Accessories > Clothing > Clothing Tops > Blouses"
+    description_short: "Slim fit crop top with chest buckle, hollow-out accents, and V-neck for bold streetwear style."
+    price: "153.89"
+    compare_price: ""
+    variants:
+      sizes: []
+      colors: ["white", "black", "beige"]
+    stock_total: 0
+    sku_list: []
+    images:
+      - "https://cdn.shopify.com/s/files/1/0769/7924/1060/files/Photoroom_20260304_122442.png?v=1772683777"
+    feature_highlights:
+      - "Trendy crop top"
+      - "Chest buckle detail"
+      - "Versatile pairing"
+    tags: []
+    status: active
+
+  - product_name: "Sleeveless Knit Nightgown"
+    handle: "sleeveless-knit-nightgown"
+    product_url: "https://katilyn.com/products/sleeveless-knit-nightgown"
+    category: "Apparel & Accessories > Clothing > Dresses"
+    description_short: "Sleeveless knit nightgown with round neckline and knee-length design for comfort and elegance."
+    price: "227.79"
+    compare_price: ""
+    variants:
+      sizes: ["knee", "mini"]
+      colors: ["white", "broken-white"]
+    stock_total: 0
+    sku_list: []
+    images:
+      - "https://cdn.shopify.com/s/files/1/0769/7924/1060/files/Photoroom_20260304_123334.png?v=1772683736"
+    feature_highlights:
+      - "Soft knit nightgown"
+      - "Sleeveless design"
+      - "Elegant and practical"
+    tags: []
+    status: active
+
+  - product_name: "Summer Linen Suspender Dress"
+    handle: "summer-linen-suspender-dress"
+    product_url: "https://katilyn.com/products/summer-linen-suspender-dress"
+    category: "Apparel & Accessories > Clothing > Dresses"
+    description_short: "Breathable linen suspender dress with digital print and short length for effortless summer style."
+    price: "249.68"
+    compare_price: ""
+    variants:
+      sizes: ["short"]
+      colors: ["beige"]
+    stock_total: 0
+    sku_list: []
+    images:
+      - "https://cdn.shopify.com/s/files/1/0769/7924/1060/files/Photoroom_20260304_124153.png?v=1772684550"
+    feature_highlights:
+      - "Breezy linen dress"
+      - "Effortless summer style"
+      - "Lightweight and chic"
+    tags: []
+    status: active
+
+
+1. SUMMER ESSENTIALS COLLECTION
+
+Halter Tank Top
+Casual Cotton Shorts
+Summer Linen Suspender Dress
+Y2K Lounge Shorts
+
+
+2. NIGHT OUT & PARTY COLLECTION
+
+Elegant Evening Gown
+Yellow Mini Bodycon
+Sleeveless Knit Nightgown
+Chest Buckle Crop Top
+
+
+3. EVERYDAY CHIC COLLECTION
+
+Short Sleeve Body Shaper Dress
+Vintage Slim V‑Neck Top
+Sports Dress Leggings
+Y2K Slim Tee
