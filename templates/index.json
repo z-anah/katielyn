@@ -546,7 +546,7 @@
       },
       "name": "t:names.products_grid",
       "settings": {
-        "collection": "home-page-copy",
+        "collection": "best-sellers",
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "max_products": 8,
@@ -750,7 +750,7 @@
                   "type": "collection-card",
                   "name": "t:names.collection_card",
                   "settings": {
-                    "collection": "home-page-copy",
+                    "collection": "best-sellers",
                     "placement": "below_image",
                     "horizontal_alignment": "flex-start",
                     "vertical_alignment": "center",
