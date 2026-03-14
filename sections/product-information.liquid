@@ -178,27 +178,6 @@
   additional_blocks: additional_blocks
 %}
 
-{%- if product.metafields.custom.associated_reviews.value -%}
-  <div class="product-reviews-container" style="margin-top: 2rem;">
-    <h3>Customer Reviews</h3>
-    {%- for review in product.metafields.custom.associated_reviews.value -%}
-      <div class="review-item" style="border-bottom: 1px solid #eee; padding: 1rem 0;">
-        <div class="review-header" style="display: flex; gap: 10px; align-items: center;">
-          <strong>{{ review.username }}</strong>
-          <span class="stars" style="color: #ffb800;">
-            {%- for i in (1..review.stars) -%}★{%- endfor -%}
-            {%- assign blank_stars = 5 | minus: review.stars -%}
-            {%- if blank_stars > 0 -%}
-              {%- for i in (1..blank_stars) -%}☆{%- endfor -%}
-            {%- endif -%}
-          </span>
-        </div>
-        <p class="review-text" style="margin: 5px 0;">"{{ review.text }}"</p>
-      </div>
-    {%- endfor -%}
-  </div>
-{%- endif -%}
-
 {% stylesheet %}
   .sticky-add-to-cart__bar {
     position: fixed;
