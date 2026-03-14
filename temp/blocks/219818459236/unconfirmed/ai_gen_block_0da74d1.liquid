@@ -1,6 +1,363 @@
+{% doc %}
+  @prompt
+    {%- assign reviews = product.metafields.custom.associated_reviews.value -%}
+    
+    <div class="product-reviews-section page-width" style="margin: 40px 0;">
+      {%- if reviews != blank -%}
+        <h2 class="h1">{{ section.settings.heading }}</h2>
+        <div class="reviews-grid" style="display: flex; flex-direction: column; gap: 20px;">
+          {%- for review in reviews -%}
+            <div class="review-card" style="border-bottom: 1px solid #e8e8e8; padding-bottom: 15px;">
+              <div class="review-meta" style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                <span class="review-author" style="font-weight: bold;">{{ review.username }}</span>
+                <span class="review-stars" style="color: #ffb800; letter-spacing: 2px;">
+                  {%- for i in (1..5) -%}
+                    {%- if i <= review.stars -%}★{%- else -%}☆{%- endif -%}
+                  {%- endfor -%}
+                </span>
+              </div>
+              <p class="review-body" style="margin: 0; font-style: italic;">"{{ review.text }}"</p>
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+    
+    {% schema %}
+    {
+      "name": "Custom Product Reviews",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Customer Reviews"
+        }
+      ],
+      "presets": [
+        {
+          "name": "Custom Product Reviews"
+        }
+      ]
+    }
+    {% endschema %}
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% assign reviews = product.metafields.custom.associated_reviews.value %}
+
+{% style %}
+  .ai-product-reviews-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: {{ block.settings.section_padding }}px 0;
+  }
+
+  .ai-product-reviews__heading-{{ ai_gen_id }} {
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size }}px;
+    text-align: {{ block.settings.heading_alignment }};
+  }
+
+  .ai-product-reviews__grid-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.review_spacing }}px;
+  }
+
+  .ai-product-reviews__card-{{ ai_gen_id }} {
+    border-bottom: {{ block.settings.divider_width }}px solid {{ block.settings.divider_color }};
+    padding-bottom: {{ block.settings.review_spacing }}px;
+  }
+
+  .ai-product-reviews__card-{{ ai_gen_id }}:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .ai-product-reviews__meta-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+
+  .ai-product-reviews__author-{{ ai_gen_id }} {
+    font-weight: 600;
+    color: {{ block.settings.author_color }};
+    font-size: {{ block.settings.author_size }}px;
+  }
+
+  .ai-product-reviews__stars-{{ ai_gen_id }} {
+    color: {{ block.settings.star_color }};
+    letter-spacing: 2px;
+    font-size: {{ block.settings.star_size }}px;
+    line-height: 1;
+  }
+
+  .ai-product-reviews__body-{{ ai_gen_id }} {
+    margin: 0;
+    color: {{ block.settings.review_text_color }};
+    font-size: {{ block.settings.review_text_size }}px;
+    line-height: 1.6;
+    font-style: {{ block.settings.review_text_style }};
+  }
+
+  .ai-product-reviews__empty-{{ ai_gen_id }} {
+    text-align: center;
+    padding: 40px 20px;
+    color: {{ block.settings.review_text_color }};
+    font-size: {{ block.settings.review_text_size }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-product-reviews-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-product-reviews__heading-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size }}px * 0.8);
+    }
+  }
+{% endstyle %}
+
+<product-reviews-{{ ai_gen_id }} class="ai-product-reviews-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  {% if reviews != blank %}
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-product-reviews__heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+    <div class="ai-product-reviews__grid-{{ ai_gen_id }}">
+      {% for review in reviews %}
+        <div class="ai-product-reviews__card-{{ ai_gen_id }}">
+          <div class="ai-product-reviews__meta-{{ ai_gen_id }}">
+            <span class="ai-product-reviews__author-{{ ai_gen_id }}">{{ review.username }}</span>
+            <span class="ai-product-reviews__stars-{{ ai_gen_id }}" aria-label="{{ review.stars }} out of 5 stars">
+              {% for i in (1..5) %}
+                {% if i <= review.stars %}★{% else %}☆{% endif %}
+              {% endfor %}
+            </span>
+          </div>
+          <p class="ai-product-reviews__body-{{ ai_gen_id }}">"{{ review.text }}"</p>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="ai-product-reviews__empty-{{ ai_gen_id }}">
+      No reviews yet for this product.
+    </div>
+  {% endif %}
+</product-reviews-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class ProductReviews{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+      }
+    }
+
+    customElements.define('product-reviews-{{ ai_gen_id }}', ProductReviews{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Product reviews",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Customer Reviews"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_padding",
+      "label": "Section padding",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "label": "Heading spacing",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "review_spacing",
+      "label": "Review spacing",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Heading style"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Review style"
+    },
+    {
+      "type": "range",
+      "id": "author_size",
+      "label": "Author name size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "author_color",
+      "label": "Author name color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "star_size",
+      "label": "Star size",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star color",
+      "default": "#ffb800"
+    },
+    {
+      "type": "range",
+      "id": "review_text_size",
+      "label": "Review text size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "review_text_color",
+      "label": "Review text color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "review_text_style",
+      "label": "Review text style",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal"
+        },
+        {
+          "value": "italic",
+          "label": "Italic"
+        }
+      ],
+      "default": "italic"
+    },
+    {
+      "type": "header",
+      "content": "Divider"
+    },
+    {
+      "type": "range",
+      "id": "divider_width",
+      "label": "Divider width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider color",
+      "default": "#e8e8e8"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product reviews"
+    }
+  ],
+  "tag": null
+}
 {% endschema %}
