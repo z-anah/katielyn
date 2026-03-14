@@ -983,7 +983,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>EXPRESS DELIVERY</h2>",
+                "text": "<p>FREE SHIPPING AUSTRALIA</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
@@ -1009,7 +1009,7 @@
               "type": "text",
               "name": "t:names.description",
               "settings": {
-                "text": "<p>Available worldwide</p>",
+                "text": "<p>Enjoy Complimentary Shipping on All Orders</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
@@ -1093,7 +1093,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>FREE RETURNS</h2>",
+                "text": "<p>30-DAY RETURNS</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
@@ -1119,7 +1119,7 @@
               "type": "text",
               "name": "t:names.description",
               "settings": {
-                "text": "<p>Subject to T&Cs</p>",
+                "text": "<p>Hassle-free shopping</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
