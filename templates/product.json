@@ -178,7 +178,7 @@
               "type": "variant-picker",
               "name": "t:names.product_variant_picker",
               "settings": {
-                "variant_style": "dropdowns",
+                "variant_style": "buttons",
                 "show_swatches": true,
                 "alignment": "left",
                 "padding-block-start": 0,
